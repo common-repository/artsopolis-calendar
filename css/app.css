@@ -1,0 +1,3983 @@
+/* 
+    Document   : artsopolis-calendar
+    Author     : vulh
+    Description: Purpose of the stylesheet follows.
+*/
+
+.eli_clear {
+    clear: both;
+    height: auto !important;
+}
+.eli_hidden {
+    display: none !important;
+}
+.eli_clearfix::before, .eli_clearfix::after {
+    content: " " !important;
+    display: table !important;
+}
+.eli_clearfix::after {
+    clear: both !important;
+}
+html[xmlns] .eli_clearfix {
+    display: block !important;
+}
+* html .eli_clearfix {
+    height: 1% !important;
+}
+button, input, select, textarea {
+    font-family: arial,sans-serif;
+}
+div.warning {
+    background-color: #fff;
+    border-left-color: #ffd900;
+    border-left-style: solid;
+    border-left-width: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+    padding-bottom: 1px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 1px;
+}
+div.warning p {
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    padding-bottom: 0.5em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5em;
+}
+.apl-internal-content{
+    position: relative;
+    width: 100%
+}
+.eli_wrap.artsopolis-calendar-frontend{
+    position: relative;
+    width: 100%;
+}
+.artsopolis-calendar .feed-input {
+    width: 200px !important;
+}
+.artsopolis-calendar .hndle {
+    cursor: auto !important;
+}
+.artsopolis-calendar .child {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #ddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #ddd;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #ddd;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ddd;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.artsopolis-calendar .thumb {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #cccccc;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-left: 1px;
+    max-height: 63px;
+    max-width: 100px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    right: 20px;
+    top: 0;
+}
+.artsopolis-calendar .delete-btn, .artsopolis-calendar .delete-btn:hover, .artsopolis-calendar .delete-btn:link {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../img/icon-delete.jpg");
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-bottom-color: -moz-use-text-color !important;
+    border-bottom-style: none !important;
+    border-bottom-width: medium !important;
+    border-image-outset: 0 0 0 0 !important;
+    border-image-repeat: stretch stretch !important;
+    border-image-slice: 100% 100% 100% 100% !important;
+    border-image-source: none !important;
+    border-image-width: 1 1 1 1 !important;
+    border-left-color: -moz-use-text-color !important;
+    border-left-style: none !important;
+    border-left-width: medium !important;
+    border-right-color: -moz-use-text-color !important;
+    border-right-style: none !important;
+    border-right-width: medium !important;
+    border-top-color: -moz-use-text-color !important;
+    border-top-style: none !important;
+    border-top-width: medium !important;
+    cursor: pointer;
+    height: 20px;
+    width: 24px;
+}
+.artsopolis-calendar .logo-deleting {
+    color: #c33;
+}
+.artsopolis-calendar #artsopolis-calendar-content {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+}
+.artsopolis-calendar h4.hndle {
+    border-bottom-color: #eee;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+}
+.artsopolis-calendar-settings-category .hide-show-subcategory {
+    cursor: pointer;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.artsopolis-calendar .w-95-p {
+    width: 566px;
+}
+.artsopolis-calendar .metabox-holder h3 {
+    font-size: 18px;
+}
+.artsopolis-calendar .metabox-holder h4 {
+    font-size: 16px;
+}
+.artsopolis-calendar .sub-row {
+    margin-left: 50px;
+}
+.artsopolis-calendar .form-table th {
+    font-weight: normal;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 220px;
+}
+.artsopolis-calendar .form-table td {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+.artsopolis-calendar td.description {
+}
+.artsopolis-calendar .artsopolis-calendar-settings-category .row {
+    display: block;
+    float: left;
+    width: 250px;
+}
+.artsopolis-calendar .artsopolis-calendar-settings-category .row label {
+    text-transform: uppercase;
+}
+.artsopolis-calendar .artsopolis-calendar-settings-filter-display div.desc {
+    display: block;
+    float: left;
+    width: 105px;
+}
+.artsopolis-calendar .artsopolis-calendar-settings-filter-display label {
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+}
+.artsopolis-calendar #affiliate-key {
+    float: left;
+}
+.artsopolis-calendar .artsopolis-calendar-status-container {
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+.artsopolis-calendar .artsopolis-calendar-status-container .artsopolis-calendar-error .artsopolis-calendar-message, .artsopolis-calendar .artsopolis-calendar-status-container .artsopolis-calendar-success .artsopolis-calendar-message {
+    list-style-type: none;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 0;
+    padding-top: 2px;
+}
+.artsopolis-calendar .artsopolis-calendar-status-container .artsopolis-calendar-error .artsopolis-calendar-message {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../img/error.png");
+    background-origin: padding-box;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    color: #c33;
+}
+.artsopolis-calendar .artsopolis-calendar-status-container .artsopolis-calendar-success .artsopolis-calendar-message {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../img/accept.png");
+    background-origin: padding-box;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    color: #390;
+}
+.artsopolis-calendar .button-primary {
+    float: right;
+}
+.artsopolis-calendar-frontend {
+    color: #141412;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+.artsopolis-calendar-frontend h6.eli_tags.eli_h6 {
+    font-weight: normal;
+    margin-top: 10px;
+    text-transform: uppercase;
+    margin-left: 0 !important;
+}
+.artsopolis-calendar-frontend h6.eli_h6.eli_tags a.eli_a {
+    cursor: pointer;
+}
+.artsopolis-calendar-frontend h6.eli_h6.eli_tags a.eli_a:hover {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend #artsopolis_calendar_map_canvas {
+    height: 347px !important;
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_m-t-15 {
+    margin-top: 15px !important;
+}
+.artsopolis-calendar-frontend .eli_m-t-5 {
+    margin-top: 5px !important;
+}
+.artsopolis-calendar-frontend .eli_event-website {
+    float: left !important;
+    font-weight: bold;
+    padding-top: 4px !important;
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_p-t-10 {
+    padding-top: 10px;
+}
+.artsopolis-calendar-frontend h4.eli_h4.eli_heading-bar {
+    background-color: #777777;
+    color: #ffffff;
+    float: left !important;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 15px !important;
+    padding-bottom: 6px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    padding-top: 6px !important;
+    text-transform: uppercase;
+    width: 100% !important;
+    max-width: 100% !important;
+    line-height: calc(100% + 12px);
+}
+.artsopolis-calendar-frontend .eli_row-detail {
+    float: left !important;
+    width: 100% !important;
+}
+h4.eli_heading-bar {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_row-detail h6.eli_h6 {
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_row-detail .eli_title a.eli_a {
+    text-decoration-color: -moz-use-text-color !important;
+    text-decoration-line: none !important;
+    text-decoration-style: solid !important;
+}
+.artsopolis-calendar-frontend .eli_row-detail h6.eli_h6, .artsopolis-calendar-frontend .eli_row-detail h6.eli_h6 a.eli_a {
+    float: left !important;
+    border: 0;
+    box-shadow: none;
+}
+.artsopolis-calendar-frontend .eli_row-detail .eli_arrow-map {
+    box-shadow: none;
+    padding-left: 2px !important;
+    display: inline;
+    vertical-align: middle;
+}
+.artsopolis-calendar-frontend .eli_font-s-16 {
+    font-size: 16px;
+}
+.artsopolis-calendar-frontend i.eli_i.eli_detail-icon {
+    float: left !important;
+    height: 30px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: 28px !important;
+}
+.artsopolis-calendar-frontend .eli_row-detail .eli_full-map {
+    font-weight: bold;
+    line-height: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 10px !important;
+    width: 210px !important;
+}
+.artsopolis-calendar-frontend .eli_row-detail a.eli_a {
+    color: #000000 !important;
+    border: 0;
+    box-shadow: none;
+}
+.artsopolis-calendar-frontend .eli_row-detail .eli_content, .artsopolis-calendar-frontend .eli_row-detail.eli_content {
+    float: left !important;
+    padding-left: 15px !important;
+    width: 100% !important;
+    padding-bottom: 10px !important;
+}
+.artsopolis-calendar-frontend .eli_admission-icon {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../img/admission-28x30.png");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    float: left !important;
+    height: 35px !important;
+    margin-left: 8px !important;
+    width: 42px !important;
+}
+.artsopolis-calendar-frontend .eli_location-icon {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../img/location-icon-28x30.png");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+.artsopolis-calendar-frontend .eli_calendar-icon {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../img/small-calendar-icon-28x30.png");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+.artsopolis-calendar-frontend .eli_row-detail .eli_row-main {
+    margin-top: 5px !important;
+}
+.artsopolis-calendar-frontend .eli_expand-more-dates, .artsopolis-calendar-frontend .eli_collapse-more-dates {
+    cursor: pointer;
+    float: left !important;
+    width: 100% !important;
+}
+.eli_button.eli_tiny {
+    background-color: #fb6f00;
+    font-weight: bold;
+    padding-bottom: 0 !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    padding-top: 0 !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+div.eli_site-content div.eli_entry-content {
+    max-width: 700px !important;
+}
+.artsopolis-calendar-frontend .eli_wrap-inner {
+    background-color: transparent;
+}
+.artsopolis-calendar-frontend .eli_produce-wrap, .artsopolis-calendar-frontend .eli_content-can-filter {
+    background-color: #fff;
+}
+.artsopolis-calendar-frontend .eli_produce-wrap-inner h2.eli_h2, .artsopolis-calendar-frontend .eli_row h4.eli_h4.eli_title a.eli_a {
+    color: #333 !important;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 25pt;
+    font-style: normal;
+    -moz-hyphens: none !important; 
+    hyphens: none !important;
+}
+.artsopolis-calendar-frontend .eli_produce-wrap-inner h2.eli_h2 {
+    margin-bottom: 20px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    text-align: center !important;
+}
+.artsopolis-calendar-frontend .eli_produce-wrap-inner p.eli_p {
+    margin-bottom: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_content-can-filter-inner {
+    padding-bottom: 2px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    padding-top: 2px !important;
+}
+.artsopolis-calendar-frontend .eli_header {
+}
+.artsopolis-calendar-frontend .eli_header ul.eli_ul {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 17px !important;
+}
+.artsopolis-calendar-frontend .eli_header .eli_cate {
+    float: left !important;
+    list-style-type: none !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 17px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_header .eli_cate a.eli_a {
+    border-right-color: #fff;
+    border-right-style: solid;
+    border-right-width: 1px;
+    color: #ccc;
+    font-size: 16px;
+    padding-bottom: 0 !important;
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+    padding-top: 0 !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-transform: capitalize;
+}
+.artsopolis-calendar-frontend .eli_header .eli_cate a.eli_a.eli_active {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_header .eli_cate.eli_last a.eli_a {
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+}
+.artsopolis-calendar-frontend .eli_content-inner {
+    position: relative !important;
+}
+#artsopolis-calendar-list-feed {
+    position: relative !important;
+}
+.artsopolis-calendar-frontend .eli_content-inner .eli_filter {
+    background-color: #e7e7e7;
+    padding-bottom: 4px !important;
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+    padding-top: 17px !important;
+}
+.artsopolis-calendar-frontend .eli_content-inner .eli_filter div {
+    box-sizing: border-box !important;
+    float: left !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner input.eli_keyword,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_category-filter > select.eli_select,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_location-filter > select.eli_select,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_venue-filter > select.eli_select,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-filter-from-wrapper > input.eli_input,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-filter-to-wrapper > input.eli_input,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-today,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-tomorrow,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-weekend,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#reset {
+    box-sizing: border-box !important;
+    display: inline-block !important;
+    float: left !important;
+    height: 26px !important;
+    line-height: 23px !important;
+    margin-bottom: 13px !important;
+    margin-left: 0 !important;
+    margin-right: 2px !important;
+    margin-top: 0 !important;
+    padding-bottom: 2px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 2px;
+    vertical-align: top !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-filter-to-wrapper > img, .artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-filter-from-wrapper > img {
+    box-sizing: border-box !important;
+    height: 26px !important;
+    margin-bottom: 13px !important;
+    margin-left: -3px !important;
+    margin-right: 3px !important;
+    margin-top: 0 !important;
+    padding-bottom: inherit !important;
+    padding-left: inherit !important;
+    padding-right: inherit !important;
+    padding-top: inherit !important;
+    vertical-align: top !important;
+    width: auto !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_input, .artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_select {
+    padding-bottom: 2px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 2px !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-filter-to-wrapper, .artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-filter-from-wrapper {
+    width: 126px !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-weekend {
+    margin-bottom: 13px !important;
+    margin-left: 0 !important;
+    margin-right: 40px !important;
+    margin-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_content-inner .eli_list {
+    padding-bottom: 10px !important;
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+    padding-top: 10px !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-item input.eli_input {
+    width: 100px !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-item input.eli_input, .artsopolis-calendar-frontend .eli_filter .eli_filter-item select.eli_select, .artsopolis-calendar-frontend .eli_filter a.eli_a.eli_button {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 14px;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-item input.eli_input, .artsopolis-calendar-frontend .eli_filter .eli_filter-item select.eli_select {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #ffffff;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #ccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #ccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #ccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ccc;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.artsopolis-calendar-frontend .eli_filter a.eli_button {
+    font-weight: bold;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-item select.eli_select {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #fff;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-item #reset {
+    background-color: #777777;
+    cursor: pointer;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_button {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #777;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    color: #fff;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_button.eli_active {
+    background-attachment: scroll !important;
+    background-clip: border-box !important;
+    background-color: #908f8f !important;
+    background-image: none !important;
+    background-origin: padding-box !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+    background-size: auto auto !important;
+}
+span.eli_line {
+    color: #ddd;
+    margin-bottom: 0 !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    margin-top: 0 !important;
+}
+#choice-from-date {
+    height: 21px !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 3px !important;
+    margin-top: 0 !important;
+}
+#choice-to-date {
+    height: 21px !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 12px !important;
+    margin-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_filter a.eli_button-primary {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #1e8cbe;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    float: left !important;
+}
+.artsopolis-calendar-frontend .eli_row {
+    border-bottom-color: #000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 10px !important;
+    padding-bottom: 5px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 10px !important;
+}
+.artsopolis-calendar-frontend .eli_row h4.eli_title {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_row h4.eli_title a.eli_a {
+    line-height: 35px !important;
+    margin-bottom: 5px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 5px !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row h4.eli_title a.eli_a:hover {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row span.eli_address {
+    color: #777777;
+    font-size: 16px;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main {
+    float: left !important;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 10px !important;
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img, .artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information {
+    float: left !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img {
+    height: auto !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 5px !important;
+    min-height: 100px !important;
+    width: 40% !important;
+}
+@media (min-width: 960px) {
+    .artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img {
+        max-height: 200px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img.square {
+        max-height: 250px;
+    }
+}
+@media (min-width: 1024px) {
+    .artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img {
+        width: 250px !important;
+    }
+}
+
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information {
+    box-sizing: border-box;
+    padding-bottom: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    
+    width: -webkit-calc(100% - 250px) !important;
+    width: -moz-calc(100% - 250px) !important;
+    width: calc(100% - 250px) !important;    
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-inner {
+    float: left !important;
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-left {
+    width: 65% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-right {
+    width: 35% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-left, .artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-right {
+    float: left !important;
+    min-height: 100px !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-right .eli_button-container {
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 2px !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-left .eli_offer-date {
+    font-size: 16px;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 10px !important;
+    margin-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main img.eli_img {
+    float: left !important;
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main img.eli_img.eli_fb_icon, .artsopolis-calendar-frontend .eli_row .eli_row-main img.eli_img.eli_tw_icon {
+    width: auto !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_expand-summary {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row .eli_summary p.eli_summary-short, .artsopolis-calendar-frontend .eli_row .eli_summary p.eli_summary-full {
+    font-size: 16px;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    text-align: justify;
+}
+.artsopolis-calendar-frontend .eli_inner-full {
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_inner-full input.eli_input.keyword {
+    float: left !important;
+    width: 38% !important;
+}
+.artsopolis-calendar-frontend .eli_filter-item .eli_category-filter {
+}
+.artsopolis-calendar-frontend .eli_row a.eli_a {
+    color: #333 !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date, .artsopolis-calendar-frontend .eli_row .eli_full-price, .artsopolis-calendar-frontend .eli_row .eli_our-price {
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date {
+    font-size: 12px;
+    font-weight: normal;
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date br.eli_br {
+    line-height: 22px !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date .eli_offer-date-title, .artsopolis-calendar-frontend .eli_row .eli_full-price .eli_full-price-title, .artsopolis-calendar-frontend .eli_row .eli_our-price .eli_our-price-title {
+    color: #999;
+    display: block !important;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 5px !important;
+    margin-top: 0 !important;
+    text-transform: uppercase;
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date .eli_offer-date-title {
+    font-weight: normal;
+}
+.artsopolis-calendar-frontend .eli_row .eli_full-price .eli_full-price-title, .artsopolis-calendar-frontend .eli_row .eli_our-price .eli_our-price-title {
+    text-align: center;
+}
+.artsopolis-calendar-frontend .eli_row .eli_full-price .eli_full-price-content, .artsopolis-calendar-frontend .eli_row .eli_our-price .eli_our-price-content {
+    display: block !important;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 41px !important;
+    text-align: center;
+}
+.artsopolis-calendar-frontend .eli_row .eli_full-price .eli_full-price-content {
+    color: #999;
+}
+.artsopolis-calendar-frontend .eli_full-w-float-l {
+    float: left !important;
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_our-price .eli_our-price-content {
+    color: #ff6600;
+}
+.artsopolis-calendar-frontend .eli_row .eli_button.eli_large {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    background-attachment: scroll !important;
+    background-clip: border-box !important;
+    background-color: #fb6f00 !important;
+    background-image: none !important;
+    background-origin: padding-box !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+    background-size: auto auto !important;
+    border-bottom-color: -moz-use-text-color !important;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-style: none !important;
+    border-bottom-width: medium !important;
+    border-image-outset: 0 0 0 0 !important;
+    border-image-repeat: stretch stretch !important;
+    border-image-slice: 100% 100% 100% 100% !important;
+    border-image-source: none !important;
+    border-image-width: 1 1 1 1 !important;
+    border-left-color: -moz-use-text-color !important;
+    border-left-style: none !important;
+    border-left-width: medium !important;
+    border-right-color: -moz-use-text-color !important;
+    border-right-style: none !important;
+    border-right-width: medium !important;
+    border-top-color: -moz-use-text-color !important;
+    border-radius: 0;
+    border-top-style: none !important;
+    border-top-width: medium !important;
+    display: block !important;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+    max-width: 134px !important;
+    padding-bottom: 10px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 10px !important;
+    text-align: center !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    width: auto !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_information .eli_button.eli_large:hover{
+    background-color: #f39951 !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_information .eli_button.eli_large.eli_green:hover{
+    background-color: #54cff1 !important;
+}
+.artsopolis-calendar-frontend .eli_m-r-5 {
+    margin-right: 5px !important;
+}
+.artsopolis-calendar-frontend .eli_row-detail {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-bottom-color: -moz-use-text-color !important;
+    border-bottom-style: none !important;
+    border-bottom-width: 0 !important;
+    border-image-outset: 0 0 0 0 !important;
+    border-image-repeat: stretch stretch !important;
+    border-image-slice: 100% 100% 100% 100% !important;
+    border-image-source: none !important;
+    border-image-width: 1 1 1 1 !important;
+    border-left-color: -moz-use-text-color !important;
+    border-left-style: none !important;
+    border-left-width: 0 !important;
+    border-right-color: -moz-use-text-color !important;
+    border-right-style: none !important;
+    border-right-width: 0 !important;
+    border-top-color: -moz-use-text-color !important;
+    border-top-style: none !important;
+    border-top-width: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_row-detail h6.eli_h6, .artsopolis-calendar-frontend .eli_row-detail p.eli_p {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_button.eli_large.eli_green {
+    background-attachment: scroll !important;
+    background-clip: border-box !important;
+    background-color: #00bff3 !important;
+    background-image: none !important;
+    background-origin: padding-box !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+    background-size: auto auto !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_button-container-detail .eli_btn-buy-ticket {
+    font-size: 24px;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    width: 134px !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_button-container-detail .eli_btn-buy-ticket:hover{
+    background-color: #f39951 !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_button-container-detail .eli_green.eli_btn-buy-ticket:hover{
+    background-color: #54cff1 !important
+}
+.artsopolis-calendar-frontend .eli_button-container-detail {
+    margin-left: 10px !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date {
+    width: 100%;
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date-content-summary a.eli_a:hover {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row .eli_offer-date-content-full a.eli_a:hover {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row .eli_summary .eli_summary-short a.eli_a:hover {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row .eli_summary .eli_summary-full a.eli_a:hover {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_row .eli_button.eli_large span.eli_span {
+    color: #fff;
+    display: block !important;
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    -moz-hyphens: none !important;
+    hyphens: none !important;
+}
+.artsopolis-calendar-frontend .eli_summary-short, .artsopolis-calendar-frontend .eli_summary-full {
+    font-size: 16px;
+}
+.artsopolis-calendar-frontend .eli_pagination > ul::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.artsopolis-calendar-frontend .eli_pagination > ul {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #fff;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    padding-bottom: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_pagination > ul > li {
+    float: left !important;
+    list-style-image: none !important;
+    list-style-position: outside !important;
+    list-style-type: none !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+.artsopolis-calendar-frontend .eli_pagination > ul > li > a, .artsopolis-calendar-frontend .eli_pagination > ul > li > span {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #444;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #c0c0c0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c0c0c0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c0c0c0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c0c0c0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: inline-block !important;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    padding-top: 4px !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-frontend .eli_pagination > ul > li > a:hover {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #346;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+}
+.artsopolis-calendar-frontend .eli_pagination > ul > li.active > a, .artsopolis-calendar-frontend .eli_pagination > ul > li.active > span {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #346;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #c0c0c0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c0c0c0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c0c0c0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c0c0c0;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) inset, 0 1px 0 rgba(255, 255, 255, 0.8);
+    color: #fff;
+    cursor: default;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.artsopolis-calendar-frontend .artsopolis-calendar-loading {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../img/loading.gif");
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    display: block !important;
+    position: absolute !important;
+    z-index: 9999 !important;
+}
+.ui-datepicker {
+    font-size: 13px !important;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile .eli_row .eli_row-main a.eli_img {
+    max-width: 250px !important;
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile .eli_row .eli_row-main .eli_information {
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile .eli_row .eli_row-main .eli_information .eli_information-inner {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 10px !important;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile .eli_filter .eli_date-filter-from-to {
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile .eli_row h4.eli_title a.eli_a {
+    font-size: 26px;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile .eli_row .eli_button.eli_large {
+    width: 130px !important;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile .eli_row .eli_button.eli_large span.eli_span {
+    font-size: 12px;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile-small .eli_row .eli_button.eli_large {
+    width: 115px !important;
+}
+.artsopolis-calendar-frontend.artsopolis-calendar-mobile-small .eli_row .eli_button.eli_large span.eli_span {
+    font-size: 11px;
+}
+@media only screen and (max-width: 480px), not all {
+.artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img {
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information {
+    width: 100% !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-inner {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 10px !important;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_date-filter-from-to {
+}
+.artsopolis-calendar-frontend .eli_row .eli_button.eli_large {
+    width: 130px !important;
+}
+.artsopolis-calendar-frontend .eli_row .eli_button.eli_large span.eli_span {
+    font-size: 12px;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-item #reset {
+}
+}
+@media only screen and (max-width: 640px), not all {
+.artsopolis-calendar-frontend #filter-by-location {
+    height: 25px !important;
+}
+}
+#checking-xml-feed, #checking-category-xml {
+    color: #ff0000;
+}
+#checking-xml-feed, #checking-all-category-xml {
+    color: #ff0000;
+}
+.eli_powered-by {
+    font-size: 24px;
+    padding-top: 10px !important;
+}
+#artsopolis-calendar-choice-weekend {
+    margin-right: 40px !important;
+}
+.artsopolis-calendar-search-again {
+    cursor: pointer;
+}
+fieldset.teaser-widget-fieldset {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #dddddd;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #dddddd;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #dddddd;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+fieldset.teaser-widget-fieldset legend {
+    font-size: 14px;
+}
+.artsopolis-calendar .arts-select {
+    width: 200px;
+}
+.eli_content-inner .tabs {
+    display: inline-block;
+    width: 100%;
+}
+.eli_content-inner .tabs .tab-links {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+.eli_content-inner .tabs .tab-links::after {
+    border-bottom-color: #999999;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    clear: both;
+    content: "";
+    display: block;
+}
+.eli_content-inner .tabs .tab-links li {
+    float: left;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+.eli_content-inner .tabs .tab-links li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #ffffff;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #ffffff;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ffffff;
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    padding-left: 0 !important;
+    background: none !important;
+    margin: 0 !important;
+}
+.eli_content-inner .tabs .tab-links a {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #cccccc;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    transition-delay: 0s;
+    transition-duration: 0.15s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+.eli_content-inner .tab-links a:hover {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #999999;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+.eli_content-inner .tabs .tab-links li.active a, li.active a:hover {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #999999;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    color: #ffffff;
+}
+.eli_content-inner .tabs .tab-links li.active {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #999999;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #999999;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #999999;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #999999;
+    border-top-style: solid;
+    border-top-width: 1px;
+    position: relative;
+    top: 1px;
+}
+.eli_content-inner .tabs .tab-links li.active::after {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #999999;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    bottom: -2px;
+    content: "";
+    height: 2px;
+    left: -1px;
+    position: absolute;
+    width: 100%;
+}
+.eli_content-inner .tabs .tab-content {
+}
+.eli_content-inner .tabs .tab {
+    display: none;
+}
+.eli_content-inner .tabs .tab.active {
+    display: block;
+}
+.artsopolis-calendar-frontend .eli_span {
+    line-height: 1.5 !important;
+}
+.artsopolis-calendar-frontend .tab-content .note {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.artsopolis-calendar-frontend .eli_pagination {
+    margin-top: 10px;
+    clear: both;
+}
+.artsopolis-calendar-frontend .eli_h6 {
+    font-size: 16px;
+}
+ul.artsopolis-calendar-tabs-menu {
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+ul.artsopolis-calendar-tabs-menu li {
+    float: left;
+    font-size: 17px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+ul.artsopolis-calendar-tabs-menu li a {
+    color: #444;
+    float: left;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    text-align: left;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration: none;
+    text-decoration-style: solid;
+}
+ul.artsopolis-calendar-tabs-menu li.active {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #cccccc;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+}
+ul.artsopolis-calendar-tabs-menu li.active a:hover {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    color: #444;
+}
+#toplevel_page_admin-artsopolis-calendar {
+    display: none;
+}
+#ac-admin-all-feeds legend {
+    float: left;
+    width: 160px;
+}
+#ac-admin-all-feeds input[type="submit"] {
+    float: right;
+    margin-top: 6px;
+}
+#ac-admin-all-feeds hr {
+    float: left;
+    width: 100%;
+}
+.wrap.artsopolis-calendar #setting-error-settings_updated {
+    clear: both;
+}
+.ac_error_tip {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #d82223;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 11px;
+    margin-bottom: 0;
+    margin-left: -1em;
+    margin-right: 1px;
+    margin-top: 1.5em;
+    max-width: 150px;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    position: absolute;
+    text-align: center;
+    white-space: normal;
+    z-index: 9999999;
+}
+.ac_error_tip::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #d82223;
+    border-bottom-style: solid;
+    border-bottom-width: 8px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-left-width: 8px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-right-width: 8px;
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 8px;
+    content: "";
+    display: block;
+    left: 50%;
+    margin-bottom: 0;
+    margin-left: -3px;
+    margin-right: 0;
+    margin-top: -1em;
+    position: absolute;
+    top: -3px;
+}
+.ac-input-error {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-bottom-color: #dd3d36 !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    border-image-outset: 0 0 0 0 !important;
+    border-image-repeat: stretch stretch !important;
+    border-image-slice: 100% 100% 100% 100% !important;
+    border-image-source: none !important;
+    border-image-width: 1 1 1 1 !important;
+    border-left-color: #dd3d36 !important;
+    border-left-style: solid !important;
+    border-left-width: 1px !important;
+    border-right-color: #dd3d36 !important;
+    border-right-style: solid !important;
+    border-right-width: 1px !important;
+    border-top-color: #dd3d36 !important;
+    border-top-style: solid !important;
+    border-top-width: 1px !important;
+}
+.wrap.artsopolis-calendar .error.settings-error {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+#artsopolis-calendar-body {
+    clear: both;
+}
+#ac-feed-filter {
+    margin-top: 8px;
+}
+.mar-t0 {
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0;
+}
+#artsopolis-calendar-tabs-events .tab-content {
+    display: block !important;
+}
+.artsopolis-calendar-slider {
+    height: 300px;
+    position: relative;
+    width: 100%;
+}
+.artsopolis-calendar-slider li .b-share-cat {
+    float: left;
+    margin-left: 15px;
+    margin-top: 13px;
+}
+.artsopolis-calendar-slider .silder-footer {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #cdcbcc;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+.artsopolis-calendar-slider .flexslider {
+    opacity: 0;
+    margin-bottom: 0;
+}
+.artsopolis-calendar-slider .flex-control-paging li a {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    box-shadow: none;
+    color: #fff;
+    background: #000;
+    height: 28px;
+    text-indent: 0;
+    width: 28px;
+    display: block;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    text-align: center;
+    line-height: 28px;
+}
+.artsopolis-calendar-slider .flex-direction-nav a::before {
+    content: "";
+}
+.artsopolis-calendar-slider .flex-direction-nav a.flex-next::before {
+    content: "";
+}
+.artsopolis-calendar-slider .flex-control-paging li a.flex-active {
+    background: #fff;
+    color:#000;
+}
+.artsopolis-calendar-slider .flex-control-paging li a:hover{
+    background: #fff;
+    color:#000;
+    text-decoration: none;
+}
+.apl-internal-content ol{
+    margin-left: 0;
+}
+.artsopolis-calendar-slider .art-calendar-silder-footer .flex-control-nav {
+    
+    height: 100%;
+    padding-top: 5px;
+    text-align: right;
+    margin-left: 0;
+    position: relative;
+    top: 0;
+}
+.artsopolis-calendar-slider .flexslider {
+    width: 100%;
+}
+
+#artsopolis-calendar-tabs-events ul li,
+.ac-search-bkl ul li {
+    padding-top: 0 !important;
+}
+#artsopolis-calendar-tabs-events ul li::before,
+.ac-search-bkl ul li::before,
+#artsopolis-calendar-pagination ul li::before {
+    display: none;
+}
+
+.artsopolis-calendar-slider .flex-control-nav li {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 5px !important;
+    margin-top: 2px !important;
+    margin-left: 0 !important;
+}
+
+.artsopolis-calendar-slider .flex-control-nav li:hover a {
+    color: #000000;
+}
+.artsopolis-calendar-slider .flex-direction-nav {
+    bottom: 30px;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+.artsopolis-calendar-slider .flex-direction-nav a {
+    font-size: 0;
+    opacity: 0.4;
+}
+.artsopolis-calendar-slider .flex-direction-nav a .flex-active {
+    color: #fcb234;
+}
+.artsopolis-calendar-slider .flex-direction-nav .flex-prev {
+    /*background-image: url("../images/prev-arrow.png");*/
+    background-repeat: no-repeat;
+    height: 30px;
+    left: -75px;
+    opacity: 0.4;
+    width: 30px;
+}
+.artsopolis-calendar-slider .flex-direction-nav .flex-next {
+    /*background-image: url("../images/next-arrow.png");*/
+    background-repeat: no-repeat;
+    height: 30px;
+    left: -40px;
+    opacity: 0.4;
+    width: 30px;
+}
+.artsopolis-calendar-slider .flexslider {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-clip: padding-box;
+    background-color: #ebebeb;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-style: none;
+    border-top-width: medium;
+    box-shadow: none;
+    float: left;
+}
+.artsopolis-calendar-slider .flexslider .slides {
+    background-attachment: scroll !important;
+    background-clip: border-box !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    background-origin: padding-box !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+    background-size: auto auto !important;
+    height: 250px !important;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+.artsopolis-calendar-slider .flexslider:hover .flex-prev {
+    left: -75px;
+}
+.artsopolis-calendar-slider .flexslider:hover .flex-next {
+    left: -40px;
+}
+.artsopolis-calendar-slider .flexslider .slides li {
+    height: 250px;
+    margin-left: 0;
+    padding-left: 0 !important;
+}
+.artsopolis-calendar-slider .slider-pic {
+    background-color: #e4dfe1;
+    float: left;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 45%;
+}
+.artsopolis-calendar-slider .slider-pic img {
+    height: 100%;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    position: relative;
+    width: auto !important;
+}
+.artsopolis-calendar-slider .slider-content {
+    background-color: #ebebeb;
+    box-sizing: border-box;
+    float: left;
+    height: 250px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    position: relative;
+    width: 55%;
+}
+.artsopolis-calendar-slider .slider-content h2 {
+    color: #666;
+    font-size: 22px!important;
+    font-weight: normal;
+    max-height: 52px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    line-height: 26px;
+    margin-top:0!important;
+    margin-bottom: 10px!important;
+}
+.artsopolis-calendar-slider .slider-content h2 a {
+    color: #666;
+}
+.artsopolis-calendar-slider .slider-content h2:hover {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+.artsopolis-calendar-slider .slider-content .desc {
+    font-size: 12px;
+    margin-bottom: 5px;
+    max-height: 82px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    line-height: 20px;
+}
+.artsopolis-calendar-slider .slider-content .date {
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 10px;
+    max-height: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.artsopolis-calendar-slider .slider-content .b-share {
+    bottom: 0;
+    left: 20px;
+    position: absolute;
+}
+.artsopolis-calendar-slider .slider-content .meta {
+    margin-bottom: 0;
+}
+.artsopolis-calendar-slider .slider-content .meta.auth {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.artsopolis-calendar-slider .slider-content a.vmore {
+    bottom: 10px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    right: 20px;
+}
+#artsopolis-calendar-settings table tr td i {
+    color: #999;
+    font-size: 11px;
+    vertical-align: middle;
+}
+#artsopolis-calendar-settings table tr td .wp-picker-container + i {
+    vertical-align: top !important;
+}
+
+.artsopolis-calendar-slider .flexslider .slides li {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+}
+
+.artsopolis-calendar-slider .flex-control-paging li a {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+@media (max-width: 768px){
+    .artsopolis-calendar-slider .slider-content{
+        width: 100%;
+        height: 250px;
+    }
+    .artsopolis-calendar-slider .slider-pic{
+        width: 100%;
+    }
+    .artsopolis-calendar-slider{
+        height:550px;
+    }
+    .artsopolis-calendar-slider .flexslider .slides{
+        height: 500px!important;
+    }
+}
+#artsopolis-calendar-settings table.form-table tr {
+    padding-top: 7px;
+    display: block;
+}
+
+/** Square CSS from Mr Thinh */
+@media(min-width: 769px) {
+    .artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img.square {
+        max-width: 250px;
+        width: 250px !important;
+        max-height: 250px !important;
+        overflow: hidden;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 768px) {
+    .artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img.square {
+        width:  174px !important;
+        max-height: 174px !important;
+        overflow: hidden;
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_row-main div.eli_information {
+        width: calc(100% - 174px) !important;
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information div.eli_information-left {
+        width: 100% !important;
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-left,
+    .artsopolis-calendar-frontend .eli_row .eli_row-main div.eli_information div.eli_information-right{
+        min-height: 61px !important;
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information div.eli_information-right {
+        width: 110px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .lg-tag {
+        margin-left: 0 !important;
+        padding: 5px 0 20px;
+        text-align: center !important;
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img.square {
+        width: calc(100vw - 54px) !important;
+        overflow: hidden;
+    }
+    .artsopolis-calendar-frontend #artsopolis-calendar-detail-event .eli_row-detail.eli_content.square {
+        padding-left: 0px !important;
+    }
+}
+@media(max-width: 320px) {
+    .logo{
+        /*width:width_of_logo;
+        height:height_of_logo;
+        background:url('Logo url') no-repeat;*/
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_row-main a.eli_img.square {
+        width: calc(100vw - 27px) !important;
+        height: calc(100vw - 27px) !important;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 960px) {
+    .artsopolis-calendar-frontend #artsopolis-calendar-detail-event .eli_row .eli_row-main a.eli_img.square {
+        max-height: 250px;
+    }
+}
+
+
+/** END Square CSS from Mr Thinh */
+
+
+
+/** Custom css spotling image**/
+.artsopolis-calendar-slider .slider-pic.square {
+    width: 250px;
+    overflow: hidden;
+}
+.artsopolis-calendar-slider.square .slider-content {
+    width: calc(100% - 250px) !important;
+}
+@media (max-width: 768px) {
+    .artsopolis-calendar-slider.square {
+        height: 740px;
+    }
+    .artsopolis-calendar-slider.square .flexslider .slides {
+        height: 698px !important;
+    }
+    .artsopolis-calendar-slider.square .slider-pic.square {
+        width: 100%;
+        height: 448px;
+    }
+    .artsopolis-calendar-slider.square .slider-content {
+        width: 100% !important;
+    }
+    .artsopolis-calendar-slider.square .flexslider .slides li {
+        height: 448px;
+    }
+    .footer {
+        overflow-x: hidden;
+    }
+}
+@media (max-width: 480px)  {
+    .artsopolis-calendar-slider.square {
+        height: auto;
+    }
+    .artsopolis-calendar-slider.square .slider-pic.square {
+        height: calc(100vw - 20px);
+    }
+    .artsopolis-calendar-slider.square .flexslider .slides {
+        height: auto !important;
+        background: #ebebeb !important;
+    }
+    .artsopolis-calendar-slider.square .flexslider .slides li {
+        height: auto;
+    }
+    .artsopolis-calendar-slider.square .slider-pic.square {
+        float: none;
+    }
+    .artsopolis-calendar-slider.square .slider-content {
+        height: auto;
+        float: none;
+    }
+    .artsopolis-calendar-slider.square .slider-content a.vmore {
+        position: relative;
+        display: block;
+        text-align: right;
+        margin-top: 10px;
+    }
+}
+
+/** @ticket #20274: [CF] Artsopolis Calendar - In the plugin config form, add an 'Override stylesheet' field - Item 3 */
+.artsopolis-calendar-override-css-content label{
+    line-height: 1.3;
+    font-size: 14px;
+}
+
+.artsopolis-calendar-override-css-content #article_wrapper_artsopolis-calendar-override-css{
+    margin-top: 10px;
+}
+.artsopolis-calendar-frontend .eli_row  .eli_row-main.ac-event-no-image .eli_img{
+    display: none
+}
+
+.artsopolis-calendar-frontend .eli_row .eli_row-main.ac-event-no-image .eli_information{
+    width: 100% !important;
+    padding-left: 0 !important;
+}
+
+.artsopolis-calendar-frontend .eli_row .eli_row-main.ac-event-no-image  .eli_information-left{
+    min-height: unset !important;
+}
+
+.artsopolis-calendar-frontend .eli_row-main.ac-event-no-image .eli_button-container-detail{
+    margin-left: 0 !important;
+}
+
+
+@media (min-width: 769px){
+    .artsopolis-calendar-frontend .eli_row .eli_row-main.ac-event-no-image .eli_information .eli_information-left{
+        width: 75%!important;
+    }
+
+    .artsopolis-calendar-frontend .eli_row .eli_row-main.ac-event-no-image .eli_information .eli_information-right{
+        width: 25%!important;
+    }
+}
+
+.artsopolis-calendar-frontend .eli_filter .eli_filter-item .eli_input.eli_keyword {
+    width: 140px !important;
+}
+
+@media (max-width: 700px) {
+    .artsopolis-calendar-frontend #artsopolis-calendar-filter.eli_filter .eli_filter-inner .eli_date-util>a#reset {
+        margin-left: 0 !important;
+    }
+}
+
+.eli_a.eli_button.ac-btn-search {
+    background: #3c9eda;
+}
+
+.eli_a.eli_button.ac-btn-search:hover {
+    background: #6fbcea;
+}
+
+.eli_a.eli_button.ac-btn-search,
+.eli_a.eli_button.ac-btn-reset {
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 23px;
+    padding: 2px 13px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.eli_a.eli_button.ac-btn-reset{
+    background: #666;
+}
+.eli_a.eli_button.ac-btn-reset:hover {
+    background: #b1b1b1;
+}
+
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_venue-filter > select.eli_select{
+    max-width: 85px;
+}
+
+.ac-default-category .desc {
+    margin-top: 5px;
+}
+
+.ac-default-category .desc-option i {
+    margin-left: 105px;
+    color: #999;
+    font-size: 11px;
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+    url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+    url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+    url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa-clock-o:before {
+    content: "\f017";
+}
+
+.fa-th:before {
+    content: "\f00a";
+}
+
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+    content: "\f0c9";
+}
+
+.fa-calendar:before {
+    content: "\f073";
+}
+
+.fa-spin{
+    -webkit-animation:fa-spin 2s infinite linear;
+    animation:fa-spin 2s infinite linear;
+    color: #fff;
+}
+.fa-spinner:before{
+    content:"\f110"
+}
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.fa-3x {
+    font-size: 3em;
+}
+
+nav.ac-type {
+    position: relative;
+    list-style-type: none;
+    float: right;
+    right: 2px;
+    margin-top: 10px;
+}
+nav.ac-type li {
+    float: left;
+    display: block;
+    width: 45px;
+    height: 41px;
+    line-height: 41px;
+    border: 1px #e1e1e1 solid;
+    background-color: #f9f9f9;
+    margin-left: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+nav.ac-type li:hover {
+    background-color: #0f0f0f;
+}
+nav.ac-type li:hover a {
+    color: #fff;
+}
+nav.ac-type li.current {
+    background-color: #0f0f0f;
+}
+nav.ac-type li.current a {
+    color: #fff;
+}
+nav.ac-type li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    position: relative;
+    color: #666;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+nav.ac-type li a > i{
+    font-size: 24px;
+    margin: auto;
+}
+nav.ac-type li a:hover {
+    color: #fff;
+    box-shadow: none;
+    border: 0px !important;
+    text-decoration: none;
+}
+
+nav.ac-type li:first-child {
+    cursor: default;
+    border: none;
+    color: #929292;
+    width: auto;
+}
+
+nav.ac-type li:first-child:hover {
+    background: transparent;
+}
+
+.ac-type-bkl {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.artsopolis-calendar-frontend .eli_produce-wrap-inner {
+    text-align: center;
+}
+
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-today,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-tomorrow,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-weekend,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#reset{
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background: #666;
+    height: auto !important;
+    outline: none;
+    box-shadow: none;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a:active{
+    outline: none;
+}
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a.eli_active{
+    background: #82c400 !important;
+    text-decoration: none;
+}
+
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#reset {
+    margin-left: 5px !important;
+    background: #3c9eda;
+}
+
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-today:hover,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-tomorrow:hover,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#artsopolis-calendar-choice-weekend:hover,
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#reset:hover {
+    background: #b1b1b1;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: none;
+}
+
+.artsopolis-calendar-frontend .eli_filter .eli_filter-inner .eli_date-util > a#reset:hover {
+    background: #6fbcea;
+}
+
+.artsopolis-calendar-frontend .eli_filter a.eli_a.eli_button {
+    border-radius: 0;
+}
+
+.artsopolis-calendar-frontend select {
+    -webkit-appearance: menulist !important;
+}
+.artsopolis-calendar-frontend select::-ms-expand {
+    display: block !important;
+}
+.artsopolis-calendar-frontend  .ac-search-bkl .ac-type li{
+    margin: 0 0 0 7px !important;
+    font-size: 13px;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-two .show-events{
+    line-height: 1.6em;
+    font-size: 1.1em;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-two .show-events > div.item:not(.item-last):before{
+    /*content: "\2022";*/
+    /*padding-right: 5px;*/
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-two .show-events .item.item-last.show-tablet{
+    position: absolute;
+    bottom: 0px;
+}
+.artsopolis-calendar-frontend .eli_row a.eli_a{
+    display: inline-block;
+}
+@media (max-width: 600px) {
+    .artsopolis-calendar-frontend .eli_produce-wrap-inner h2.eli_h2{
+        font-size: 20pt;
+        margin-bottom: 5px !important;
+    }
+    .artsopolis-calendar-frontend .ac-month-bar > span.start_month {
+        font-size: 22px;
+        line-height: 25px;
+        padding-bottom: 15px;
+    }
+    .artsopolis-calendar-frontend .eli_row h4.eli_title {
+        padding-bottom: 10px !important;
+    }
+    .artsopolis-calendar-frontend .eli_row h4.eli_h4.eli_title a.eli_a{
+        font-size: 20px;
+        line-height: 28px !important;
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-left,
+    .artsopolis-calendar-frontend .eli_row .eli_row-main .eli_information .eli_information-right{
+        min-height: auto !important;
+    }
+    .artsopolis-calendar-frontend .ac-search-bkl nav.ac-search-list-thumb li .div-one .search-img{
+        max-height: 190px;
+    }
+    .ac-search-bkl nav.ac-search-list-thumb li .div-two .show-events{
+        line-height: 1em;
+    }
+    .ac-search-bkl nav.ac-search-list-thumb li .div-two .show-events{
+        font-size: 11px;
+    }
+}
+@media (max-width: 768px) {
+    .artsopolis-calendar-frontend .eli_filter .eli_filter-item input.eli_input,
+    .artsopolis-calendar-frontend .eli_filter .eli_filter-item select.eli_select,
+    .artsopolis-calendar-frontend .eli_filter a.eli_a.eli_button {
+        font-size: 12px;
+    }
+    .calendar-container .ac-cl-head{
+        display: none !important;
+    }
+    .artsopolis-calendar-frontend .eli_content-inner .eli_list{
+        padding-top: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .artsopolis-calendar-frontend  .ac-date-cell .viewmore{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .artsopolis-calendar-frontend .eli_filter .eli_filter-item input.eli_input,
+    .artsopolis-calendar-frontend .eli_filter .eli_filter-item select.eli_select,
+    .artsopolis-calendar-frontend .eli_filter a.eli_a.eli_button {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 370px){
+    .artsopolis-calendar-frontend .eli_filter .eli_filter-item input.eli_input,
+    .artsopolis-calendar-frontend .eli_filter .eli_filter-item select.eli_select,
+    .artsopolis-calendar-frontend .eli_filter a.eli_a.eli_button {
+        font-size: 10px;
+    }
+}
+
+#artsopolis-calendar-tabs-events .viewmore-box .arrow-box{
+    z-index: -1;
+}
+.viewmore-box .ac-cl-event-list{
+    list-style-type:none;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.viewmore-box .ac-cl-event-list li{
+    position: relative;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 5px 0px;
+    list-style: none;
+}
+.calendar-container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: table;
+}
+#artsopolis-calendar-tabs-events .viewmore-box .arrow-box {
+    position: absolute;
+    width: 110px;
+    height: 135px;
+    top: -8px;
+    left: 0;
+}
+#artsopolis-calendar-tabs-events .closeviewmore{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: rgb(91, 91, 197);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 99999;
+    display: none;
+}
+#artsopolis-calendar-tabs-events .closeviewmore img{
+    width: 10px;
+    margin-top: -8px;
+    padding-top: 3px;
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+.page-detail-calendar-event .eli_content-can-filter-inner .eli_h2.calendar-event-main-title{
+    display: none;
+}
+
+#artsopolis-calendar-tabs-events .tab-content .tab {
+    width: 100%;
+}
+.ac-search-bkl {
+    position: relative;
+    display: table;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.ac-search-bkl .nav {
+    display: block;
+}
+
+.ac-search-list-thumb  {
+    position: relative;
+    list-style-type: none;
+    margin-right: -3%;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 30.3%;
+    height: 268px;
+    margin-right: 3% !important;
+    margin-left: 0 !important;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px #e1e1e1 solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art .search-info {
+    width: 90%;
+    margin: 8px 5%;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art .search-info .ev-tt {
+    color: #666;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 0;
+    display: block;
+    max-height: 39px;
+    overflow: hidden;
+    margin-bottom: 7px;
+    line-height: 1.2em;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art .search-info .ev-tt:hover {
+    color: #666;
+    text-decoration: underline;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art .search-info .career {
+    font-size: 11px;
+    color: #999;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art .search-info span.s-desc {
+    display: none;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art:hover {
+    background-color: #ccc;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art:hover .search-img {
+    display: none;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art:hover .search-info .ev-tt {
+    color: #fff;
+    margin-top: 50px;
+    max-height: 70px;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art:hover .search-info .meta.auth {
+    display: block;
+    color: #fff;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art:hover .search-info .meta.auth a {
+    color: #fff;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one.art:hover .search-info .sch-date {
+    margin-bottom: 10px;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover {
+    background-color: #999;
+    color: #fff;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-img {
+    display: none;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-info .ev-tt {
+    color: #fff;
+    margin-top: 25px;
+    max-height: 64px;
+    -webkit-line-clamp: 3;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-info .meta.auth {
+    display: block;
+    color: #fff;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-info .meta.auth a {
+    color: #fff;
+    border: none;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-info .meta.auth a:hover {
+    text-decoration: underline;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-info .sch-date {
+    margin-bottom: 10px;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-img {
+    width: 100%;
+    height: auto;
+    max-height: 183px;
+    overflow: hidden;
+}
+.apl-internal-content a img {
+    padding-right: 0px!important;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-img img {
+    width: 100%;
+    height: auto;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info {
+    width: 90%;
+    margin: 8px 5%;
+    display: block;
+    color: inherit;
+    border-bottom: 0px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info:hover {
+    text-decoration: none;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info .ev-tt {
+    color: #666;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 0;
+    display: block;
+    max-height: 39px;
+    overflow: hidden;
+    margin-bottom: 7px;
+    line-height: 1.2em;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info .ev-tt {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info .ev-tt:hover {
+    color: #666;
+    text-decoration: underline;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info .meta.auth {
+    display: none;
+    line-height: 1.5em;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info .sch-date {
+    bottom: 5px;
+    position: absolute;
+    color: #000;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover{
+    text-decoration: none;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-info .sch-date{
+    color: #fff;
+}
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .meta.auth{
+    text-decoration: none;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-two {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #000;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .div-two .show-events {
+    width: 90%;
+    height: 208px;
+    margin: 37px 5%;
+    overflow: hidden;
+    color: #fff;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .ico-date {
+    z-index: 20;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    text-align: center;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .ico-date:hover + .div-two {
+    display: block;
+}
+.ac-search-bkl nav.ac-search-list-thumb li .ico-date a {
+    top: 3px;
+    position: relative;
+    color: #fcb234;
+    cursor: pointer;
+    border: none;
+}
+.search-map {
+    width: 100%;
+    height: auto;
+}
+.search-map img {
+    width: 100%;
+    height: auto;
+}
+.ac-search-bkl nav.searching-list {
+    position: relative;
+    list-style-type: none;
+}
+.ac-search-bkl nav.searching-list li {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+    min-height: 100px;
+}
+.ac-search-bkl nav.searching-list li:hover {
+    background: #000;
+}
+.ac-search-bkl nav.searching-list li:hover .info-content .search-info .ev-tt {
+    color: #fff;
+}
+.ac-search-bkl nav.searching-list li:hover .info-content .search-info .meta.auth {
+    color: #fff;
+}
+.ac-search-bkl nav.searching-list li:hover .info-content .search-info .meta.auth a {
+    color: #fff;
+}
+.ac-search-bkl nav.searching-list li:hover .info-content .searchdate .sch-date {
+    color: #fff;
+}
+.ac-search-bkl nav.searching-list li .search-img {
+    float: left;
+    margin-right: 10px;
+    height: auto;
+    min-height: 100px;
+    width: 100px;
+    max-height: 100px;
+    overflow: hidden;
+}
+.ac-search-bkl nav.searching-list li .search-img img {
+    width: 100%;
+    height: auto;
+}
+.ac-search-bkl nav.searching-list li .info-content {
+    position: absolute;
+    left: 100px;
+    height: 100px;
+}
+.ac-search-bkl nav.searching-list li .info-content .searchdate {
+    float: left;
+    max-height: 19px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.ac-search-bkl nav.searching-list li .info-content .searchdate .sch-date {
+    display: block;
+    color: #999999;
+    font-size: 14px;
+}
+.ac-search-bkl nav.searching-list li .info-content .ico-date {
+    position: relative;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+}
+.ac-search-bkl nav.searching-list li .info-content .ico-date a {
+    color: #fcb234;
+}
+.ac-search-bkl nav.searching-list li .info-content .ico-date .show-date {
+    display: none;
+    position: absolute;
+    padding: 5px;
+    width: 180px;
+    border: 1px solid #fcb234;
+    background-color: #fff;
+    z-index: 1000;
+}
+.ac-search-bkl nav.searching-list li .info-content .ico-date .show-date .item {
+    width: 100%;
+    display: block;
+}
+.ac-search-bkl nav.searching-list li .info-content .ico-date:hover .show-date {
+    display: block;
+    left: -180px;
+}
+.ac-search-bkl nav.searching-list li .info-content .search-info {
+    float: left;
+    width: 45%;
+    min-height: 30px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.ac-search-bkl nav.searching-list li .info-content span {
+    line-height: 1.2;
+}
+.ac-search-bkl nav.searching-list li .info-content .ev-tt {
+    color: #666;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 0;
+    display: block;
+    max-height: 39px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.ac-search-bkl nav.searching-list li .info-content .ev-tt:hover {
+    color: #666;
+    text-decoration: underline;
+}
+.ac-search-bkl nav.searching-list li .info-content .meta {
+    max-height: 45px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info .ev-tt:hover {
+    color: #fff;
+}
+
+.ac-search-bkl nav.searching-list li .info-content span, .ac-search-bkl nav.ac-search-list-thumb li .div-one .search-info .ev-tt {
+    line-height: 20px;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .career,
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .s-desc,
+.ac-search-bkl nav.searching-list li:hover .career,
+.ac-search-bkl nav.searching-list li:hover .s-desc,
+.ac-search-bkl nav.searching-list li:hover .career a,
+.ac-search-bkl nav.search-artist-thumb li:not(.ac-no-hover) .div-one:hover .career,
+.ac-search-bkl nav.search-artist-thumb li:not(.ac-no-hover) .div-one:hover .s-desc,
+.ac-search-bkl nav.search-artist-list li:hover .info-content .career,
+.ac-search-bkl nav.search-artist-list li:hover .info-content .s-desc
+{
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .ac-search-bkl nav.ac-search-list-thumb li {
+        width: 47%;
+    }
+}
+
+@media (max-width: 370px){
+    .ac-search-bkl nav.ac-search-list-thumb li {
+        width: 47%;
+    }
+}
+
+#artsopolis-calendar-tabs-events nav.ac-search-list-thumb.ac-shadow li {
+    box-shadow: 0 3px 6px 3px rgba(0, 0, 0, 0.2) !important
+}
+
+/** @ticket #22140 */
+.ac-search-bkl nav.ac-search-list-thumb .ac-thumb-no-image  .div-one .search-img{
+    display: none;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li.ac-thumb-no-image{
+    height: 150px;
+}
+.ac-search-bkl nav.ac-search-list-thumb li.ac-thumb-no-image .div-one .search-info .meta.auth{
+    height: 28px;
+    overflow: hidden;
+    line-height: 14px;
+}
+.ac-search-bkl nav.ac-search-list-thumb li.ac-thumb-no-image:not(.ac-no-hover) .div-one:hover .search-info .ev-tt {
+    margin-top: 12px;
+    padding-right: 30px;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.ac-search-bkl nav.ac-search-list-thumb li.ac-thumb-no-image:not(.ac-no-hover) .div-one:hover .search-info p {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .ac-search-bkl nav.ac-search-list-thumb li.ac-thumb-no-image{
+        height: 150px;
+    }
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li.ac-thumb-no-image .div-one .search-info .ev-tt,
+.ac-search-bkl nav.ac-search-list-thumb li:not(.ac-no-hover) .div-one:hover .search-info .ev-tt{
+    padding-right: 30px;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li.ac-no-hover .ico-date{
+    display: none
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li.ac-no-hover .div-one .search-info .ev-tt:hover{
+    color: #666 !important;
+}
+
+.ac-search-bkl nav.ac-search-list-thumb li.ac-no-hover .div-one{
+    text-decoration: none;
+}
+.ac-cl-head .day {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 14.28%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+    line-height: 56px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #e4e4e4;
+}
+.ac-cl-date .ac-date-cell:first-child {
+    border-left: 1px solid #e4e4e4;
+    clear: both;
+}
+.ac-cl-date .ac-date-cell {
+    width: 14.28%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 150px;
+    padding-bottom: 15px;
+    float: left;
+    position: relative;
+    display: inline-block;
+    border-right: 1px solid #e4e4e4;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.ac-cl-date .ac-date-cell .num {
+    position: relative;
+    left: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+}
+.ac-cl-date .event .ac-cl-event-list li span {
+    font-size: 10px;
+    color: #666;
+    font-weight: normal;
+}
+.ac-month-bar {
+    width: 100%;
+    height: 70px;
+    text-align: left;
+}
+.ac-month-bar .next-month {
+    float: left;
+    width:100%;
+}
+.ac-month-bar >span {
+    margin-left: 2%;
+}
+.ac-month-bar > span.month-view-title {
+    font-weight: 700;
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 15px;
+}
+.light-box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    z-index: 1000000;
+}
+.light-box {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+.btn-noW, .event-btn .btn-submit, .event-edit-btn .btn-edit, .comment-ct p.t-l a, nav.searching-list li .info-content .ico-date .show-date {
+    border: 1px solid #3090e5;
+}
+.ac-cl-date .event .ac-cl-event-list li span {
+    font-size: 12px;
+    color: #029ED9;
+    font-weight: normal;
+}
+.ac-cl-date .event {
+    position: relative;
+    width: 100%;
+    display: block;
+    float: left;
+    height: auto;
+    max-height: 235px;
+    overflow: hidden;
+    padding-bottom: 3px;
+}
+.sevenday .event{
+    max-height: 100px;
+}
+#ac-add-event-calendar .contain-vm-large {
+    display: block;
+}
+#ac-add-event-calendar .contain-vm-small {
+    display: none;
+}
+.disable {
+    opacity: 1;
+}
+.ac-cl-date .ac-date-cell .dName {
+    display: none;
+}
+.ac-cl-date .ac-date-cell .sun {
+    position: relative;
+    left: 5px;
+    font-weight: 700;
+    font-size: 13px;
+}
+.ac-cl-date .event .ac-cl-event-list {
+    width: 100%;
+    text-align: left;
+    display: block;
+    float: left;
+    padding: 0px;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.ac-cl-date .event .ac-cl-event-list li {
+    margin-bottom: 0;
+    padding-top: 5px;
+    list-style: none;
+    margin: 0 !important;
+}
+.popup-btn {
+    float: left;
+    margin-right: 10px;
+    left: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.btn-noW {
+    font-size: 13px;
+    background-color: #fff;
+    width: auto;
+    text-align: center;
+    padding: 9px 20px;
+    cursor: pointer;
+    border: 1px solid #3090e5;
+    font-weight: 700;
+    color: #666666;
+    margin-right: 15px;
+}
+
+.time-filter {
+    width: 60%;
+    position: relative;
+    display: block;
+    float: left;
+}
+.width-40{
+    width: 40%;
+}
+.calendar-filter-content{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.apply-all a {
+    text-align: center;
+    position: absolute;
+}
+
+.time-filter .start, .time-filter .end {
+    width: 100%;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+}
+.time-filter label {
+    width: 85px;
+    float: left;
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-left: 5px;
+    line-height: 38px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.time-filter select.time {
+    width: 50px;
+    height: 40px;
+    background-color: #f9f9f9;
+    font-size: 12px;
+    padding-left: 3px;
+    color: #666666;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: -1px;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0px!important;
+}
+.time-filter span.arrowH {
+    width: 19px;
+    height: 37px;
+    background-color: #f9f9f9;
+    position: absolute;
+    left: 120px;
+    z-index: 10;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #efefef;
+    pointer-events: none;
+}
+.time-filter select.time {
+    width: 50px;
+    height: 40px;
+    background-color: #f9f9f9;
+    font-size: 12px;
+    padding-left: 3px;
+    color: #666666;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: -1px;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0px!important;
+}
+.time-filter span.clock {
+    position: relative;
+    background-color: #f9f9f9;
+    float: left;
+    width: 40px;
+    margin-left: -18px;
+    height: 38px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.time-filter span.clock .fa-clock-o {
+    color: #666;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.time-filter label {
+    margin: 0px!important;
+    margin-top: 1px!important;
+}
+
+.clear-all {
+    /*width: 120px;*/
+    /*height: 80px;*/
+    /*float: right;*/
+    /*position: relative;*/
+    /*display: block;*/
+    /*border-left: 1px solid #000;*/
+}
+.left{
+    float: left;
+}
+.full-width{
+    width: 100%;
+}
+.clear-all-admin, .apply-all-admin{
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-top: 13px;
+}
+.btn-noW:hover{
+    color: #ffffff;
+}
+.clear-all-admin a,
+.apply-all-admin a{
+    color: #3090e5;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+
+    border: 1px solid #3090e5;
+}
+.right{
+    float: right;
+}
+.text-right{
+    text-align: right;
+}
+
+.filter{
+    margin: 0px;
+    float: left;
+    width: 100%;
+}
+
+.viewmore-box {
+    width: 200px;
+    min-height: 150px;
+    padding: 20px;
+    z-index: 2000;
+    display: none;
+    background-color: #f8f8f8;
+    position: fixed!important;
+    top:200px!important;
+    left: 40%!important;
+
+
+}
+.viewmore{
+    display: block;
+}
+.viewmore.hidden{
+    display: none;
+}
+.viewmore-content{
+    position: relative;
+}
+.closeviewmore,.closepopup{
+    position: absolute;
+    right: -23px;
+    top: -28px;
+    background: rgb(91, 91, 197);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    border: 3px solid white;
+    cursor: pointer;
+}
+.closeviewmore img{
+    padding-top: 3px;
+}
+.closepopup{
+    top: -11px;
+    right: -11px;
+}
+.closepopup img{
+    margin-top: 4px;
+}
+li.evt-itm  a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #444;
+    border-bottom: 0px;
+}
+
+.clear-all-admin a:hover, .apply-all-admin a:hover{
+    color: white;
+    background: #3090e5;
+    box-shadow: none;
+}
+
+.admin-error-text{
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+li.evt-itm a:focus,
+li.evt-itm a:focus span{
+    box-shadow: none!important;
+}
+/*Tri fix responsive calendar*/
+._apollo_event_days_of_week_field{
+    float: left;
+}
+.calendar-day-in-week-item-group{
+    float: left;
+    width: calc(100% - 185px);
+    margin-top: 27px;
+}
+.ac-date-cell.ng-scope.disable {
+}
+.ac-cl-date .ac-date-cell{
+    overflow: hidden;
+}
+.ac-cl-date .ac-date-cell.disable{
+    background: white;
+}
+.ac-viewmore{
+    color: #333 !important;
+}
+li.evt-itm a:hover,
+li.evt-itm a:hover span{
+    text-decoration: underline;
+    box-shadow: none;
+}
+.blockOverlay{
+    z-index: 1000!important;
+}
+.blockUI.blockMsg.blockPage{
+    z-index: 1000!important;
+}
+
+.selected_day span {
+    margin-top: -6px;
+}
+.calendar-day-group {
+    margin-top: -8px;
+}
+#button-update-calendar{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.viewmore-box li.evt-itm a{
+    color: #029ED9;
+}
+.viewmore-box .ac-cl-event-list li.evt-itm:last-child{
+    border-bottom: 0;
+}
+@media(max-width: 1210px) {
+    .calendar-day-in-week-item-group{
+        float: left;
+        width: calc(100% - 15px);
+        margin-left: 15px;
+    }
+}
+@media(max-width: 1175px) {
+    .calendar-day-in-week-item-group{
+        margin-top: 0px;
+    }
+    .time-filter,
+    .right.width-40,
+    ._apollo_event_days_of_week_field{
+        float: left;
+        width: 100%;
+    }
+    ._apollo_event_days_of_week_field{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .calendar-day-group{
+        float: left;
+        width: 42%;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+    #_apollo_event_end_date,
+    #_apollo_event_start_date
+    {
+        width: 75%!important;
+    }
+    #button-update-calendar{
+        float: left;
+        width: 100%;
+    }
+    .time-filter label{
+        line-height: 34px!important;
+    }
+    #box_time_calendar.box {
+        left: calc((100% - 280px)/2)!important;
+    }
+
+}
+@media(max-width: 550px){
+    #datetime-event-data  label{
+        float: left!important;
+        /*width: 100%!important;*/
+        /*margin: 0px!important;*/
+    }
+    #datetime-event-data label[for="_apollo_event_start_date"],
+    #datetime-event-data label[for="_apollo_event_end_date"],
+    ._apollo_event_days_of_week_field p,
+    #datetime-event-data label.calendar-day-in-week-label
+    {
+        width: 100%!important;
+        margin-left:0!important;
+    }
+    #datetime-event-data  p.form-field{
+        padding-left: 0px!important;
+    }
+    .clear-all-admin,.apply-all-admin,  .clear-all-admin a#calendar_clear_all,.apply-all-admin a#calendar_choice_all{
+        width: 92%;
+        float: left;
+        margin-bottom: 0px;
+        /* margin: 0px; */
+        text-align: center;
+    }
+
+}
+@media(max-width: 498px){
+    #datetime-event-data .time-filter label {
+        float: left!important;
+        width: 95%!important;
+        margin: 0px!important;
+        border-right: 1px solid #ccc;
+
+    }
+}
+.delete-calendar-cell {
+    width: 20px;
+    height: 20px;
+    background: white;
+    float: right;
+    position: absolute;
+    right: 0px;
+    z-index: 999;
+    display: none;
+    text-align: center;
+    font-size: 20px;
+}
+.ac-date-cell:hover .delete-calendar-cell {
+    display: block;
+}
+.ac-date-cell.disable .delete-calendar-cell {
+    display: none;
+}
+.ac-date-cell.disable .viewmore, .delete-calendar-cell {
+    display: none;
+}
+.viewmore{
+    margin-left: 5px;
+}
+.viewmore:hover{
+    text-decoration: underline!important;
+}
+/*TriLM: undo delete calendar event time*/
+.undo-delete-calendar-cell{
+    display: none;
+    background-color: #f1f1f1;
+}
+.inactive:hover .undo-delete-calendar-cell{
+    display: block;
+    background-color: #f1f1f1;
+}
+.undo-delete-calendar-cell {
+    width: 20px;
+    height: 20px;
+    background: white;
+    float: right;
+    position: absolute;
+    z-index: 9999;
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+.undo-delete-calendar-cell i{
+    color: #333;
+
+}
+.undo-delete-calendar-cell:hover{
+    color: #333;
+}
+.fa-plus:before {
+    content: "\f067";
+}
+.disable .ac-day{
+    opacity: 0.5;
+}
+.ac-day {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background: #B2B2B2;
+    padding: 6px;
+    color: #ffffff;
+}
+.ac-cl-head .ac-day {
+
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 14.28%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    background-color: #666666;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+span.ac-viewmore, span.ac-viewmore:hover {
+    color: #666!important;
+    margin-top: 5px;
+}
+
+.ac-date-cell.disable .viewmore,
+.delete-calendar-cell
+{
+    display: none;
+}
+.ac-date-cell span.viewmore, span.viewmore:hover
+{
+    color: #029ED9!important;
+    margin-top: 5px;
+    font-weight:bold;
+    font-size: 13px;
+}
+
+.ac-cl-date .date-week.ng-scope:last-child{
+    border-bottom: 1px solid #e4e4e4;
+}
+.ac-date-cell.ng-scope.disable {
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .ac-cl-date .ac-date-cell {
+        width: 100%;
+        float: left;
+        height: auto;
+        min-height: 40px;
+    }
+    .ac-cl-date .ac-date-cell.disable, .ac-cl-date .ac-date-cell.empty {
+        display: none;
+    }
+
+    .ac-cl-date .ac-date-cell {
+        width: 100%;
+        float: left;
+        height: auto;
+        min-height: 40px;
+        border: 1px solid #e4e4e4;
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+    .ac-cl-date .ac-date-cell .ac-day {
+        width: 25%;
+        float: left;
+    }
+
+    .ac-cl-date .ac-date-cell .event {
+        width: auto;
+        float: left;
+        min-height: 60px;
+        border-left: 1px solid #ccc;
+        max-height: none;
+        height: auto;
+    }
+    #ac-add-event-calendar .contain-vm-small {
+        display: block;
+    }
+    .ac-cl-date .ac-date-cell .event .ac-cl-event-list {
+        margin-bottom: 10px;
+        padding-right: 5px;
+    }
+    .ac-cl-head {
+        display: none;
+    }
+    #ac-add-event-calendar .contain-vm-large {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .ac-cl-head.short {
+        display: none;
+    }
+    .max-768 {
+        display: none;
+    }
+    .the-square-layout li {
+        height: 350px!important;
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 520px) {
+    .ac-cl-date .event .ac-cl-event-list li {
+        border:none;
+    }
+}
+
+@media (max-width: 480px) {
+    .ac-cl-date .ac-date-cell .event{
+        border: 1px solid #e4e4e4;
+    }
+    .ac-cl-date .ac-date-cell .ac-day {
+        width: 100% !important;
+    }
+    #ac-add-event-calendar .contain-vm-small {
+        width: 97%;
+    }
+}
+
+nav.ac-type li:first-child {
+    background-color: transparent;
+}
+
+.ac-month-bar > span.start_month {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.ac-month-bar .next-month {
+    margin-bottom: 10px;
+}
+.ac-month-bar .next-month .prev-b {
+    float: left;
+    width: auto;
+}
+.ac-month-bar .next-month .next-b {
+    float: right;
+    text-align: right;
+}
+.ac-month-bar .next-month .prev-b, .ac-month-bar .next-month .next-b {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #029ED9;
+    cursor: pointer;
+    line-height: 14px;
+}
+.ac-month-bar .next-month .prev-b:hover, .ac-month-bar .next-month .next-b:hover{
+    text-decoration: underline;
+}
+.ac-cl-date .event .ac-cl-event-list {
+    margin-left: 0px;
+}.ac-search-bkl nav.ac-search-list-thumb li
+.ac-cl-date .event .ac-cl-event-list li {
+    padding: 0;
+    display: block;
+    border-bottom: 0px;
+}
+
+.ac-cl-date .event .ac-cl-event-list li .evt-itm-ct {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #e4e4e4;
+    line-height: 1;
+    word-break: break-word;
+}
+.ac-cl-date .event .ac-cl-event-list li:last-child .evt-itm-ct {
+    border-bottom: 0px;
+}
+
+li.evt-itm  a {
+    display: inline-block;
+    box-shadow: none;
+}
+
+.ac-cl-date .event .ac-cl-event-list li .evt-itm-ct span {
+    max-height: 50px;
+    overflow: hidden;
+    display: block;
+    line-height: 1.4;
+}
+.ac-date-cell span.viewmore, span.viewmore:hover {
+    cursor: pointer;
+}
+.artsopolis-calendar-frontend .ac-cl-date{
+    clear: both;
+}
+
+.ac-month-bar .next-month{
+    margin-top: 12px;
+}
+
+.ac-month-bar > .next-month.next-month-mobile{
+    margin-top: 12px;
+}
+
+.ac-month-bar .next-month .prev-b:before{
+    content:"\00ab";
+    padding-right: 4px;
+    vertical-align: middle;
+    margin-top: -4px;
+    display: inline-block;
+}
+.ac-month-bar .next-month .next-b:after{
+    content:"\00bb";
+    padding-left: 4px;
+    vertical-align: middle;
+    margin-top: -4px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .ac-cl-date .ac-date-cell .ac-day {
+        box-sizing: border-box;
+    }
+    .ac-cl-date .ac-date-cell .event {
+        box-sizing: border-box;
+        width: 75%
+    }
+    .ac-cl-date .ac-date-cell .event .ac-cl-event-list {
+        margin-bottom: 0px;
+        padding-right: 0px;
+    }
+    .ac-cl-date .event .ac-cl-event-list li .evt-itm-ct {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .ac-cl-date .event .ac-cl-event-list li .evt-itm-ct span {
+        max-height: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .ac-cl-date .ac-date-cell .event {
+        width: 100% !important;
+    }
+    .ac-month-bar > .next-month{
+        margin-top: 5px;
+    }
+}
+
+.artsopolis-calendar-frontend .date-week{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.ac-date-cell span.viewmore:hover {
+    color: #029ED9 !important
+}
+@media all and (min-width: 800px) {
+    .artsopolis-calendar-frontend .date-week .ac-cl-date .ac-date-cell{
+        flex: 3 0px;
+    }
+}
+
+.ac-date-cell span.viewmore {
+    position: absolute;
+    bottom: 5px;
+    font-size: 12px;
+    padding-left: 5px;
+    line-height: 1.2;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x !important;
+}
+
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
+    background-image: url(images/ui-icons_454545_256x240.png) !important;
+}
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url(images/ui-icons_222222_256x240.png) !important;
+    text-indent: -99px !important;
+}
+@media(min-width: 481px) {
+    .artsopolis-calendar-frontend .eli_list .eli_row .eli_row-main a.eli_img {
+        position: relative;
+        height: 250px!important;
+    }
+    .artsopolis-calendar-frontend .eli_list .eli_row .eli_row-main img.eli_img {
+        float: left!important;
+        width: 100%!important;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        left: -1000%;
+        right: -1000%;
+        top: -1000%;
+        bottom: -1000%;
+        margin: auto;
+    }
+    .artsopolis-calendar-frontend #artsopolis-calendar-detail-event .eli_row .eli_row-main a.eli_img.square {
+        position: relative;
+        height: 250px!important;
+    }
+    .artsopolis-calendar-frontend #artsopolis-calendar-detail-event .eli_row .eli_row-main a.eli_img.square img {
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        left: -1000%;
+        right: -1000%;
+        top: -1000%;
+        bottom: -1000%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .artsopolis-calendar-frontend .ac-search-bkl nav.ac-search-list-thumb li .div-one .search-img{
+        max-height: 190px!important;
+    }
+}
+
+.the-square-layout .ac-search-bkl nav.ac-search-list-thumb li .div-one .search-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+}
+
+.the-square-layout .ac-search-bkl nav.ac-search-list-thumb li .div-one .search-img {
+    width: 100%;
+    height: 275px;
+    max-height: 275px;
+    overflow: hidden;
+    position: relative;
+}
+
+.artsopolis-calendar-frontend .eli_row .eli_button.eli_btn-event-website {
+    font-size: 24px;
+    margin: 10px 0 10px!important;
+    border-radius: 0;
+    display: block!important;
+    max-width: 134px!important;
+    text-align: center!important;
+    width: auto!important;
+    background: #666666!important;
+    border-width: medium!important;
+    padding: 10px 8px!important;
+}
+
+.artsopolis-calendar-frontend .eli_row .eli_button.eli_btn-event-website span.eli_span {
+    color: #fff;
+    display: block !important;
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    -moz-hyphens: none !important;
+    hyphens: none !important;
+}
+
+@media only screen and (max-width: 480px), not all {
+    .artsopolis-calendar-frontend .eli_row .eli_button.eli_btn-event-website {
+        width: 130px!important;
+    }
+    .artsopolis-calendar-frontend .eli_row .eli_button.eli_btn-event-website span.eli_span {
+        font-size: 12px;
+    }
+}
+
+.artsopolis-calendar-frontend .eli_row .eli_information .eli_button.eli_btn-event-website:hover{
+    background-color: #878686 !important;
+}
